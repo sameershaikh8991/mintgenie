@@ -1,61 +1,65 @@
 package com.mintgenie.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 
 @Entity
 public class Watchlist {
-	
-	
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int watchlistId;
+    private int userId;
 
-	@Id
-	private int watchlistid;
-    private int userid;
-    private String watchlistname;
-    private int numberofstocks;
+//    @Transient
+//    private static int count = 0;
+//
+//    @Transient
+//    private int increment = count++;
+    private String watchlistName; //= "Watchlist " + increment;
+    private int numberOfStocks;
     private String type;
 
     public Watchlist() {
     }
 
-    public Watchlist(int watchlistid, int userid, String watchlistname, int numberofstocks, String type) {
-        this.watchlistid = watchlistid;
-        this.userid = userid;
-        this.watchlistname = watchlistname;
-        this.numberofstocks = numberofstocks;
+    public Watchlist(int watchlistId, int userId, String watchlistName, int numberOfStocks, String type) {
+        this.watchlistId = watchlistId;
+        this.userId = userId;
+        this.watchlistName = watchlistName;
+        this.numberOfStocks = numberOfStocks;
         this.type = type;
     }
 
     public int getWatchlistId() {
-        return watchlistid;
+        return watchlistId;
     }
 
-    public void setWatchlistId(int watchlistid) {
-        this.watchlistid = watchlistid;
+    public void setWatchlistId(int watchlistId) {
+        this.watchlistId = watchlistId;
     }
 
     public int getUserId() {
-        return userid;
+        return userId;
     }
 
-    public void setUserId(int userid) {
-        this.userid = userid;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getWatchlistName() {
-        return watchlistname;
+        return watchlistName;
     }
 
-    public void setWatchlistName(String watchlistname) {
-        this.watchlistname = watchlistname;
+    public void setWatchlistName(String watchlistName) {
+        this.watchlistName = watchlistName;
     }
 
     public int getNumberOfStocks() {
-        return numberofstocks;
+        return numberOfStocks;
     }
 
-    public void setNumberOfStocks(int numberofstocks) {
-        this.numberofstocks = numberofstocks;
+    public void setNumberOfStocks(int numberOfStocks) {
+        this.numberOfStocks = numberOfStocks;
     }
 
     public String getType() {
@@ -65,10 +69,5 @@ public class Watchlist {
     public void setType(String type) {
         this.type = type;
     }
-    @Override
-	public String toString() {
-		return "Watchlist [watchlistid=" + watchlistid + ", userid=" + userid + ", watchlistname=" + watchlistname
-				+ ", numberofstocks=" + numberofstocks + ", type=" + type + "]";
-	}
-
 }
+
