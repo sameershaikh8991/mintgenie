@@ -10,7 +10,7 @@ import com.mintgenie.model.WatchlistData;
 import com.mintgenie.service.AddStockService;
 
 @RestController
-@RequestMapping("/watchlist")
+@RequestMapping("/watchlist1")
 public class AddStock {
 	
 	@Autowired
