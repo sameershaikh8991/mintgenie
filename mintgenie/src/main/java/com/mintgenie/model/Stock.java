@@ -1,12 +1,26 @@
 package com.mintgenie.model;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="bsestocks")
 public class Stock {
-    private int stock_id;
+	@Id
+	private int stock_id;
     private String stock_name;
     private int stock_price;
     private String listedOn;
     private boolean status = true;
 
+//    @ManyToOne(cascade = CascadeType.ALL,targetEntity = WatchlistData.class)
+//   // @JoinColumn(name = "watchlist_id")
+//    private WatchlistData watchlistData;
+    
     public Stock() {
     }
 
@@ -57,4 +71,5 @@ public class Stock {
     public void setStatus(boolean status) {
         this.status = status;
     }
+
 }
