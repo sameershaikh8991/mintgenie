@@ -8,4 +8,6 @@ public interface EditService {
 	public Watchlist getById(int id);
 	public void deleteById(int id);
 
+	Watchlist updatestockNumber(int id,int number);
+
 }

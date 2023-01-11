@@ -1,5 +1,6 @@
 package com.mintgenie.service;
 
+import com.mintgenie.model.Count;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,9 @@ public class EditServiceImpl  implements EditService {
 	
 	@Autowired
 	EditRepo editRepo;
+
+	@Autowired
+	Count count;
 
 	@Override
 	public void renameWatchList(Watchlist watchlist,int id) {
@@ -45,8 +49,14 @@ public class EditServiceImpl  implements EditService {
 		
 	}
 
-	
-	
-	
+	@Override
+	public Watchlist updatestockNumber( int id,int number) {
+		Watchlist watchlist = editRepo.findById(id).get();
+
+		watchlist.setNumberOfStocks(number);
+		return editRepo.save(watchlist);
+
+	}
+
 
 }
