@@ -10,11 +10,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="bsestocks")
+
 public class Stock {
 	@Id
 	private int stock_id;
-    private String stock_name;
+    private String stockName;
     private int stock_price;
     private String listedOn;
     private boolean status = true;
@@ -26,9 +26,9 @@ public class Stock {
     public Stock() {
     }
 
-    public Stock(int stock_id, String stock_name, int stock_price, String listedOn, boolean status) {
+    public Stock(int stock_id, String stockName, int stock_price, String listedOn, boolean status) {
         this.stock_id = stock_id;
-        this.stock_name = stock_name;
+        this.stockName = stockName;
         this.stock_price = stock_price;
         this.listedOn = listedOn;
         this.status = status;
@@ -43,11 +43,11 @@ public class Stock {
     }
 
     public String getStock_name() {
-        return stock_name;
+        return stockName;
     }
 
     public void setStock_name(String stock_name) {
-        this.stock_name = stock_name;
+        this.stockName = stockName;
     }
 
     public int getStock_price() {
