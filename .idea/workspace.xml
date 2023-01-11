@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="069a6f7c-1005-4e8b-9dba-cdb3beed2a05" name="Changes" comment="Ssup">
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Count.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/UserRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="069a6f7c-1005-4e8b-9dba-cdb3beed2a05" name="Changes" comment="11/1&#10;2:14">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/WatchlistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/WatchlistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/AddRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/AddRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/EditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/EditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/EditServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/EditServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +64,14 @@
       <option name="presentableId" value="Default" />
       <updated>1673262114040</updated>
     </task>
+    <task id="LOCAL-00001" summary="11/1&#10;2:14">
+      <created>1673426705092</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673426705092</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,5 +96,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="11/1&#10;2:14" />
+    <option name="LAST_COMMIT_MESSAGE" value="11/1&#10;2:14" />
   </component>
 </project>

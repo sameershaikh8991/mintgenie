@@ -11,6 +11,7 @@ import com.mintgenie.repository.AddRepo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
@@ -30,11 +31,17 @@ public class AddStockService {
 		
 	}
 
-	public Optional<WatchlistData> getByWatchListId(int id){
+	public WatchlistData getByWatchListId(int id){
 
 		String type="stock";
+		try {
+			return addRepo.findByIdWatchlistid(id).get();
+		}catch (NoSuchElementException noSuchElementException){
+			System.out.println(noSuchElementException);
+		}
 
-		return addRepo.findByIdWatchlistid(id);
+		//return addRepo.findByIdWatchlistid(id).get();
+		return null;
 	}
 
 	public List<Stock> updateStockList(WatchlistData watchlistData){
