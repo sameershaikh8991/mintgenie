@@ -28,7 +28,6 @@ public class AddStock {
 	
 	@PostMapping("/addStock")
 	public WatchlistData addStock(@RequestBody WatchlistData data) {
-		System.out.println("add Controller");
 		//getting watchlistId
 		int watchListId =data.getId().getWatchlistid();
 		//gettingWatchListDataById
@@ -53,7 +52,7 @@ public class AddStock {
 
 
 		 }else {
-			 System.out.println("limit has been reached");
+			 System.err.println("limit has been reached");
 		 }
 //		 return null;
 
