@@ -23,16 +23,14 @@ import org.springframework.stereotype.Component;
 @Data
 @AllArgsConstructor
 public class WatchlistData {
-	
+
 //	@EmbeddedId
 //	private ListId id;
 
-	@EmbeddedId
-    private  ListId id;
+    @EmbeddedId
+    private ListId id;
     private int userId;
-	private String type;
-
-
+    private String type;
 
 
 }

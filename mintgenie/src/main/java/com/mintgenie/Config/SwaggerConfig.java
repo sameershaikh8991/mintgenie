@@ -16,7 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 
     @Bean
-    public Docket postApi(){
+    public Docket postApi() {
         return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any()).build().apiInfo(apiInfo());
     }
@@ -24,7 +24,7 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("MintGenie")
                 .description("Practice api description")
-                .contact(new Contact("Aditya","www.google.com", "")).build();
+                .contact(new Contact("Aditya", "www.google.com", "")).build();
     }
 
 }

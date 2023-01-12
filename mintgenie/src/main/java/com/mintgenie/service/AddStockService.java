@@ -16,31 +16,31 @@ import java.util.Optional;
 
 @Service
 public class AddStockService {
-	
-	@Autowired
-	AddRepo addRepo;
-	@Autowired
-	private WatchlistRepo watchlistRepo;
 
-	@Autowired
-	private WatchlistService watchlistService;
+    @Autowired
+    AddRepo addRepo;
+    @Autowired
+    private WatchlistRepo watchlistRepo;
 
-	public WatchlistData addStocks( WatchlistData watchlistData) {
-		int watchListId =watchlistData.getId().getWatchlistid();
-		Watchlist watchlist=watchlistService.getByWatchlistId(watchListId);
-		int stocknumber=watchlist.getNumberOfStocks();
-		System.out.println(stocknumber);
-		if(stocknumber<10){
-			addRepo.save(watchlistData);
-			stocknumber=stocknumber+1;
-			watchlist.setNumberOfStocks(stocknumber);
-			watchlistService.updateWatchlist(watchlist);
-			return watchlistData;
+    @Autowired
+    private WatchlistService watchlistService;
 
-		}else {
-			System.err.println("Limit has been reached Please create new watchlist");
-		}
-		return watchlistData;
-		
-	}
+    public WatchlistData addStocks(WatchlistData watchlistData) {
+        int watchListId = watchlistData.getId().getWatchlistid();
+        Watchlist watchlist = watchlistService.getByWatchlistId(watchListId);
+        int stocknumber = watchlist.getNumberOfStocks();
+        System.out.println(stocknumber);
+        if (stocknumber < 10) {
+            addRepo.save(watchlistData);
+            stocknumber = stocknumber + 1;
+            watchlist.setNumberOfStocks(stocknumber);
+            watchlistService.updateWatchlist(watchlist);
+            return watchlistData;
+
+        } else {
+            System.err.println("Limit has been reached Please create new watchlist");
+        }
+        return watchlistData;
+
+    }
 }

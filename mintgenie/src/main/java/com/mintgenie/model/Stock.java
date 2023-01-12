@@ -13,13 +13,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
-
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
 public class Stock {
 
-	private int stock_id;
+    private int stock_id;
     private String stock_name;
     private int stock_price;
     private String listedOn;

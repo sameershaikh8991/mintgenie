@@ -1,5 +1,6 @@
 package com.mintgenie.controller;
 
+import com.mintgenie.service.WatchlistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -9,35 +10,32 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mintgenie.model.Watchlist;
-import com.mintgenie.service.EditService;
-import com.mintgenie.service.EditServiceImpl;
 
 @RestController
 @RequestMapping("/edit")
 public class EditController {
-	/**
-	 * controller t
-	 * **/
-	
-	@Autowired
-	EditService editService;
-	
-	@PutMapping("/renameWatchlist")
-	public Watchlist renameWatchlist(@RequestParam int id,@RequestBody Watchlist watchlist) {
-		
-		
-		Watchlist watchlistOG = editService.getById(id);
+    /**
+     * controller to edit the watchlist
+     **/
 
-		editService.renameWatchList(watchlist,id);
-		return watchlistOG;
-		
-	}
-	
-	@DeleteMapping("/deleteWatchlist")
-	public void deleteWatchList(@RequestParam int id) {
-		Watchlist watchlistOG = editService.getById(id);
-		editService.deleteById(id);
-		System.out.println("Deleted successfully");
-	}
+
+    @Autowired
+    WatchlistService watchlistService;
+
+    @PutMapping("/renameWatchlist")
+    public Watchlist renameWatchlist(@RequestParam int id, @RequestBody Watchlist watchlist) {
+        Watchlist watchlistOG = watchlistService.getByWatchlistId(id);
+        watchlistService.renameWatchList(watchlist, id);
+        return watchlistOG;
+
+    }
+
+    @DeleteMapping("/deleteWatchlist")
+    public void deleteWatchList(@RequestParam int id) {
+        Watchlist watchlistOG = watchlistService.getByWatchlistId(id);
+
+        watchlistService.deleteById(id);
+        System.out.println("Deleted successfully");
+    }
 
 }

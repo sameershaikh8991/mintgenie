@@ -25,9 +25,9 @@ public class AddStockToWatchList {
 
 
     @PostMapping("/addingStock")
-     public WatchlistData addStock(@RequestBody WatchlistData watchlistData){
+    public WatchlistData addStock(@RequestBody WatchlistData watchlistData) {
 
-         return  addStockService.addStocks(watchlistData);
+        return addStockService.addStocks(watchlistData);
 
-     }
+    }
 }

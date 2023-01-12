@@ -8,10 +8,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 public class MintgenieApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MintgenieApplication.class, args);
-		System.out.println("hello world...");
-		
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MintgenieApplication.class, args);
+        System.out.println("hello world...");
+
+    }
 
 }
