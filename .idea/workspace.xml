@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="069a6f7c-1005-4e8b-9dba-cdb3beed2a05" name="Changes" comment="Ssup">
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Count.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/UserRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/WatchlistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/WatchlistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/AddRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/AddRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/EditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/EditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/EditServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/EditServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="39965ffb-6c64-495d-ae76-f937ac5d7fee" name="Changes" comment="Ssup" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,12 +45,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/user/Desktop/mint/mintgenie"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
