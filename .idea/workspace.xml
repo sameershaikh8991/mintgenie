@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39965ffb-6c64-495d-ae76-f937ac5d7fee" name="Changes" comment="search">
+      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/GlobelExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/NotfoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/Response.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/MintgenieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/MintgenieApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/SearchStock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/SearchService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/DeleteStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/DeleteStock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/EditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/EditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/Exception.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/DeleteStockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/DeleteStockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -81,12 +85,20 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="069a6f7c-1005-4e8b-9dba-cdb3beed2a05" name="Changes" comment="Ssup" />
+      <changelist id="39965ffb-6c64-495d-ae76-f937ac5d7fee" name="Changes" comment="search" />
       <created>1673262114040</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673262114040</updated>
     </task>
+    <task id="LOCAL-00001" summary="search">
+      <created>1673517248216</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673517248216</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,5 +123,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="search" />
+    <option name="LAST_COMMIT_MESSAGE" value="search" />
   </component>
 </project>

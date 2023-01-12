@@ -25,7 +25,7 @@ public class DeleteStock {
  */
     @DeleteMapping("/deletestock")
     public void deletedata(@RequestParam  int sid,@RequestParam int wid,@RequestParam int uid){
-        System.out.println(" in delete stock");
+        System.out.println(" in delete stock controller");
         delete1.deletestockserv(sid,wid,uid);
         delete1.W1(wid);
     }

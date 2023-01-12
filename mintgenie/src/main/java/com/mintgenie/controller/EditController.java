@@ -33,7 +33,6 @@ public class EditController {
     @DeleteMapping("/deleteWatchlist")
     public void deleteWatchList(@RequestParam int id) {
         Watchlist watchlistOG = watchlistService.getByWatchlistId(id);
-
         watchlistService.deleteById(id);
         System.out.println("Deleted successfully");
     }
