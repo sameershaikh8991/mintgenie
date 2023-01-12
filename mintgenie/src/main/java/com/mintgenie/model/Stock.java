@@ -1,19 +1,14 @@
 package com.mintgenie.model;
 
-import org.hibernate.annotations.NaturalId;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="bsestocks")
+@Table(name = "bsestocks")
 public class Stock {
-	@Id
-	private int stock_id;
+    @Id
+    private int stock_id;
     private String stock_name;
     private int stock_price;
     private String listedOn;
@@ -22,7 +17,7 @@ public class Stock {
 //    @ManyToOne(cascade = CascadeType.ALL,targetEntity = WatchlistData.class)
 //   // @JoinColumn(name = "watchlist_id")
 //    private WatchlistData watchlistData;
-    
+
     public Stock() {
     }
 

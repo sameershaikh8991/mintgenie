@@ -1,72 +1,66 @@
 package com.mintgenie.controller;
 
-import com.mintgenie.model.Count;
 import com.mintgenie.model.Stock;
 import com.mintgenie.model.Watchlist;
+import com.mintgenie.model.WatchlistData;
+import com.mintgenie.service.AddStockService;
 import com.mintgenie.service.EditService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mintgenie.model.WatchlistData;
-import com.mintgenie.service.AddStockService;
-
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/watchlist1")
 public class AddStock {
-	
-	@Autowired
-	AddStockService addStockService;
-	@Autowired
-	EditService editService;
-	
-	@PostMapping("/addStock")
-	public WatchlistData addStock(@RequestBody WatchlistData data) {
-		//getting watchlistId
-		int watchListId =data.getId().getWatchlistid();
-		//gettingWatchListDataById
-		Watchlist watchlist=editService.getById(watchListId);
-		List<Stock> postStock=data.getStockList();
 
- 		int initialNum=watchlist.getNumberOfStocks();
-		 int numberOFStock=initialNum+postStock.size();
-		//Optional<WatchlistData> watchlistData= Optional.ofNullable(addStockService.getByWatchListId(watchListId));
-		//System.out.println(watchlistData);
-		 if (initialNum == 0){
+    @Autowired
+    AddStockService addStockService;
+    @Autowired
+    EditService editService;
 
-			 addStockService.newlyAdded(data);
-			 return addStockService.addStocks(data);
+    @PostMapping("/addStock")
+    public WatchlistData addStock(@RequestBody WatchlistData data) {
+        //getting watchlistId
+        int watchListId = data.getId().getWatchlistid();
+        //gettingWatchListDataById
+        Watchlist watchlist = editService.getById(watchListId);
+        List<Stock> postStock = data.getStockList();
 
-		 }else if( numberOFStock<10){
-			 WatchlistData watchlistData1 = addStockService.getByWatchListId(watchListId);
-			// WatchlistData watchlistData2=watchlistData1;
-			 List<Stock> stocks= addStockService.updateStockList(data);
-			 watchlistData1.setStockList(stocks);
-			 return addStockService.addStocks(watchlistData1);
+        int initialNum = watchlist.getNumberOfStocks();
+        int numberOFStock = initialNum + postStock.size();
+        //Optional<WatchlistData> watchlistData= Optional.ofNullable(addStockService.getByWatchListId(watchListId));
+        //System.out.println(watchlistData);
+        if (initialNum == 0) {
+
+            addStockService.newlyAdded(data);
+            return addStockService.addStocks(data);
+
+        } else if (numberOFStock < 10) {
+            WatchlistData watchlistData1 = addStockService.getByWatchListId(watchListId);
+            // WatchlistData watchlistData2=watchlistData1;
+            List<Stock> stocks = addStockService.updateStockList(data);
+            watchlistData1.setStockList(stocks);
+            return addStockService.addStocks(watchlistData1);
 
 
-		 }else {
-			 System.err.println("limit has been reached");
-		 }
+        } else {
+            System.err.println("limit has been reached");
+        }
 //		 return null;
 
 
-		return data;
-	}
-	
-	
-	
+        return data;
+    }
+
 
 }
 
 
-		 //getting watchlist by id
+//getting watchlist by id
 //		Watchlist watchlist = editService.getById(watchListId);
 //
 //		//getting  list of stock that we posted

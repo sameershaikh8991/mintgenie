@@ -1,5 +1,6 @@
 package com.mintgenie.controller;
 
+import com.mintgenie.dto.UserDTO;
 import com.mintgenie.model.User;
 import com.mintgenie.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,7 @@ public class UserController {
     UserServiceImpl userService;
 
     @PostMapping("/saveUser")
-    public User createUser(@RequestBody User user){
-
-       return userService.saveUser(user);
+    public UserDTO createUser(@RequestBody UserDTO userDTO) {
+        return userService.saveUser(userDTO);
     }
 }

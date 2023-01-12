@@ -1,7 +1,10 @@
 package com.mintgenie.model;
 
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Watchlist {
@@ -10,7 +13,7 @@ public class Watchlist {
     private int watchlistId;
     private int userId;
 
-//    @Transient
+    //    @Transient
 //    private static int count = 0;
 //
 //    @Transient
