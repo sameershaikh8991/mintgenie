@@ -14,10 +14,10 @@ import javax.persistence.Id;
 @Data
 @AllArgsConstructor
 public class User {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int userId;
-	private String username;
-	private int watchlistCount;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int userId;
+    private String username;
+    private int watchlistCount;
 
 }

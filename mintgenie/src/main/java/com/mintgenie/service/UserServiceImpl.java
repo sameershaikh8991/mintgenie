@@ -11,13 +11,13 @@ public class UserServiceImpl {
     @Autowired
     UserRepo userRepo;
 
-    public User saveUser(User user){
+    public User saveUser(User user) {
         userRepo.save(user);
-        return  user;
+        return user;
     }
 
-    public User getById(int id){
-       // userRepo.findById(id).get();
-        return   userRepo.findById(id).get();
+    public User getById(int id) {
+        // userRepo.findById(id).get();
+        return userRepo.findById(id).get();
     }
 }

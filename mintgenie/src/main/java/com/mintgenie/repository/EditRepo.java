@@ -7,7 +7,6 @@ import com.mintgenie.model.Watchlist;
 
 @Repository
 public interface EditRepo extends JpaRepository<Watchlist, Integer> {
-	
-	
+
 
 }
