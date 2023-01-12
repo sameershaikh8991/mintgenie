@@ -1,62 +1,35 @@
 package com.mintgenie.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.io.Serializable;
 import java.util.Objects;
 
 import javax.persistence.Embeddable;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Embeddable
 public class ListId implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	private int watchlistid;
-	private String type;
-	public ListId() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public ListId(int watchlistid, String type) {
-		super();
-		this.watchlistid = watchlistid;
-		this.type = type;
-	}
-	public int getWatchlistid() {
-		return watchlistid;
-	}
-	public void setWatchlistid(int watchlistid) {
-		this.watchlistid = watchlistid;
-	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+	private int stockid;
+
 	@Override
-	public String toString() {
-		return "ListId [watchlistid=" + watchlistid + ", type=" + type + "]";
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		ListId listId = (ListId) o;
+		return watchlistid == listId.watchlistid && stockid == listId.stockid;
 	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(type, watchlistid);
+		return Objects.hash(watchlistid, stockid);
 	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ListId other = (ListId) obj;
-		return Objects.equals(type, other.type) && watchlistid == other.watchlistid;
-	}
-	
-	
-	
-	
-
 }

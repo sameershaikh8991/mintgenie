@@ -15,6 +15,9 @@ import com.mintgenie.service.EditServiceImpl;
 @RestController
 @RequestMapping("/edit")
 public class EditController {
+	/**
+	 * controller t
+	 * **/
 	
 	@Autowired
 	EditService editService;
@@ -24,7 +27,7 @@ public class EditController {
 		
 		
 		Watchlist watchlistOG = editService.getById(id);
-		System.out.println(watchlist);
+
 		editService.renameWatchList(watchlist,id);
 		return watchlistOG;
 		

@@ -50,4 +50,8 @@ public class WatchlistServiceImpl implements WatchlistService{
         String wname = "Watchlist " + increment;
         return wname;
     }
+
+    public Watchlist updateWatchlist(Watchlist watchlist){
+         return watchlistRepo.save(watchlist);
+    }
 }

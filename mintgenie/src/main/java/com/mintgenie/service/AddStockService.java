@@ -22,58 +22,25 @@ public class AddStockService {
 	@Autowired
 	private WatchlistRepo watchlistRepo;
 
+	@Autowired
+	private WatchlistService watchlistService;
 
-	public WatchlistData addStocks( WatchlistData data) {
-		//List<Stock> stocklist = data.getStockList();
+	public WatchlistData addStocks( WatchlistData watchlistData) {
+		int watchListId =watchlistData.getId().getWatchlistid();
+		Watchlist watchlist=watchlistService.getByWatchlistId(watchListId);
+		int stocknumber=watchlist.getNumberOfStocks();
+		System.out.println(stocknumber);
+		if(stocknumber<10){
+			addRepo.save(watchlistData);
+			stocknumber=stocknumber+1;
+			watchlist.setNumberOfStocks(stocknumber);
+			watchlistService.updateWatchlist(watchlist);
+			return watchlistData;
 
-		addRepo.save(data);
-		return data;
+		}else {
+			System.err.println("Limit has been reached Please create new watchlist");
+		}
+		return watchlistData;
 		
 	}
-
-	public WatchlistData getByWatchListId(int id){
-
-		String type="stock";
-		try {
-			return addRepo.findByIdWatchlistid(id).get();
-		}catch (NoSuchElementException noSuchElementException){
-			System.out.println(noSuchElementException);
-		}
-
-		//return addRepo.findByIdWatchlistid(id).get();
-		return null;
-	}
-
-	public List<Stock> updateStockList(WatchlistData watchlistData){
-
-		int watchListId =watchlistData.getId().getWatchlistid();
-		Watchlist watchlist=watchlistRepo.findById(watchListId).get();
-		WatchlistData oldWatchList= addRepo.findByIdWatchlistid(watchListId).get();
-		List<Stock> oldStockList=oldWatchList.getStockList();
-
-
-	List<Stock> newStockList=watchlistData.getStockList();
-	List<Stock> MergedList=new ArrayList<>();
-	MergedList.addAll(oldStockList);
-		MergedList.addAll(newStockList);
-		int oldcount=watchlist.getNumberOfStocks();
-		watchlist.setNumberOfStocks(MergedList.size());
-		watchlistRepo.save(watchlist);
-
-		return MergedList;
-
-
-	}
-
-	public void newlyAdded(WatchlistData watchlistData){
-		int currentsize=watchlistData.getStockList().size();
-		int watchlistId= watchlistData.getId().getWatchlistid();
-		Watchlist watchlist=watchlistRepo.findById(watchlistId).get();
-		watchlist.setNumberOfStocks(currentsize);
-		watchlistRepo.save(watchlist);
-
-	}
-
-
-
 }
