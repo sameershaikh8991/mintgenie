@@ -10,7 +10,7 @@ public class MintgenieApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MintgenieApplication.class, args);
-		System.out.println("hello world...");
+		System.err.println("READY TO TEST...!");
 		
 	}
 
