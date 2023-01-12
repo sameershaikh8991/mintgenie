@@ -2,8 +2,8 @@ package com.mintgenie.controller;
 
 import com.mintgenie.model.Watchlist;
 import com.mintgenie.model.WatchlistData;
+import com.mintgenie.repository.UserRepo;
 import com.mintgenie.service.AddStockService;
-import com.mintgenie.service.EditService;
 import com.mintgenie.service.WatchlistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,9 +24,9 @@ public class AddStockToWatchList {
     WatchlistService watchlistService;
 
 
+
     @PostMapping("/addingStock")
     public WatchlistData addStock(@RequestBody WatchlistData watchlistData) {
-
         return addStockService.addStocks(watchlistData);
 
     }

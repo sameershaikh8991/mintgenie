@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39965ffb-6c64-495d-ae76-f937ac5d7fee" name="Changes" comment="search">
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/GlobelExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/NotfoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/Response.java" afterDir="false" />
+    <list default="true" id="39965ffb-6c64-495d-ae76-f937ac5d7fee" name="Changes" comment="exceptions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/DeleteStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/DeleteStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/EditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/EditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/Exception.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/DeleteStockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/DeleteStockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStockToWatchList.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStockToWatchList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673517248216</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="exceptions">
+      <created>1673526086763</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673526086763</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="search" />
-    <option name="LAST_COMMIT_MESSAGE" value="search" />
+    <MESSAGE value="exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="exceptions" />
   </component>
 </project>
