@@ -41,6 +41,7 @@ public class WatchlistServiceImpl implements WatchlistService{
     @Override
     public Watchlist getByWatchlistId(int id) {
         Watchlist watchlist1 = this.watchlistRepo.findById(id).get();
+
         return watchlist1;
     }
 
