@@ -1,7 +1,6 @@
 package com.mintgenie.controller;
 
 import com.mintgenie.dto.UserDTO;
-import com.mintgenie.model.User;
 import com.mintgenie.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

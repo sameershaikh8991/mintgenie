@@ -1,15 +1,7 @@
 package com.mintgenie.controller;
 
 import com.mintgenie.dto.StockDTO;
-import com.mintgenie.dto.UserDTO;
 import com.mintgenie.dto.WatchlistDTO;
-import com.mintgenie.dto.WatchlistDataDTO;
-import com.mintgenie.model.Stock;
-import com.mintgenie.model.User;
-import com.mintgenie.model.Watchlist;
-import com.mintgenie.model.WatchlistData;
-import com.mintgenie.payload.ModelMapperPayload;
-import com.mintgenie.service.AddStockService;
 import com.mintgenie.service.UserServiceImpl;
 import com.mintgenie.service.WatchlistService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +24,7 @@ public class WatchlistController {
 //        UserDTO userDTO = userService.getById(userId);
 //        watchlistDTO.setNumberOfStocks(0);
 //        return this.watchlistService.createWatchlist(watchlist, userId, type);
-        return this.watchlistService.createWatchlist(watchlistDTO,userId,type);
+        return this.watchlistService.createWatchlist(watchlistDTO, userId, type);
     }
 
     @GetMapping("/getByWatchlistId")

@@ -5,7 +5,6 @@ import com.mintgenie.model.Count;
 import com.mintgenie.model.Watchlist;
 import com.mintgenie.payload.ModelMapperPayload;
 import com.mintgenie.repository.EditRepo;
-import com.mintgenie.repository.WatchlistRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

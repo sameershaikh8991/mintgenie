@@ -4,7 +4,6 @@ import com.mintgenie.dto.UserDTO;
 import com.mintgenie.model.User;
 import com.mintgenie.payload.ModelMapperPayload;
 import com.mintgenie.repository.UserRepo;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
