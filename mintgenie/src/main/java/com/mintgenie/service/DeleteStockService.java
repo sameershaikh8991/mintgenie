@@ -15,9 +15,9 @@ public class DeleteStockService {
     @Autowired
     private WatchlistService watchlistService;
 
-    public void deletestockserv(int sid,int wid,int uid){
+    public void deletestockserv(int sid, int wid, int uid) {
         System.out.println(" in delete stock service......");
-        watchlistDataRepo.deleteStock(sid,wid,uid);
+        watchlistDataRepo.deleteStock(sid, wid, uid);
 //        watchlist=watchlistService.getByWatchlistId(wid);
 //        int stocknumber=watchlist.getNumberOfStocks();
 //        System.out.println("current stock number:"+stocknumber);
@@ -26,18 +26,17 @@ public class DeleteStockService {
 
     }
 
-    public void W1(int wid){
-       Watchlist  watchlist=watchlistService.getByWatchlistId(wid);
-       if(watchlist != null){
-           int stocknumber=watchlist.getNumberOfStocks();
-           System.out.println("current stock number:"+stocknumber);
-           if(stocknumber >0) {
-               int newst = stocknumber - 1;
-               watchlist.setNumberOfStocks(newst);
-               watchlistService.updateWatchlist(watchlist);
-           }
-       }
-        else{
+    public void W1(int wid) {
+        Watchlist watchlist = watchlistService.getByWatchlistId(wid);
+        if (watchlist != null) {
+            int stocknumber = watchlist.getNumberOfStocks();
+            System.out.println("current stock number:" + stocknumber);
+            if (stocknumber > 0) {
+                int newst = stocknumber - 1;
+                watchlist.setNumberOfStocks(newst);
+                watchlistService.updateWatchlist(watchlist);
+            }
+        } else {
             System.out.println("no stock to delete");
         }
 

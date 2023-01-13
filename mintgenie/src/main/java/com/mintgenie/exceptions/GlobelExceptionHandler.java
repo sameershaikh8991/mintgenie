@@ -11,13 +11,13 @@ public class GlobelExceptionHandler {
 
     @ExceptionHandler(NotfoundException.class)
 //    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ResponseEntity<Response> NotFoundHandler(NotfoundException ex){
+    public ResponseEntity<Response> NotFoundHandler(NotfoundException ex) {
 
-        String message=ex.getMessage();
+        String message = ex.getMessage();
 
         String status = String.valueOf(HttpStatus.NOT_FOUND);
 
-        Response response = new Response(message,status);
+        Response response = new Response(message, status);
 
         return new ResponseEntity<Response>(response, HttpStatus.NOT_FOUND);
 
@@ -25,20 +25,33 @@ public class GlobelExceptionHandler {
 
     @ExceptionHandler(UserNotfoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ResponseEntity<Response> UserNotFoundHandler(UserNotfoundException ex){
+    public ResponseEntity<Response> UserNotFoundHandler(UserNotfoundException ex) {
 
-        String message=ex.getMessage();
+        String message = ex.getMessage();
 
         String status = String.valueOf(HttpStatus.NOT_FOUND);
 
-        Response response = new Response(message,status);
+        Response response = new Response(message, status);
         System.out.println(status);
 
         return new ResponseEntity<Response>(response, HttpStatus.NOT_FOUND);
 
     }
 
+    @ExceptionHandler(CommonException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<Response> CommonException(CommonException ex) {
 
+        String message = ex.getMessage();
+
+        String status = String.valueOf(HttpStatus.BAD_REQUEST);
+
+        Response response = new Response(message, status);
+        System.out.println(status);
+
+        return new ResponseEntity<Response>(response, HttpStatus.BAD_REQUEST);
+
+    }
 
 
 }

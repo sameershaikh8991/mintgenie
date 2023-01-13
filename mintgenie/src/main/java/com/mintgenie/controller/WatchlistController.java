@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/watchlist")
 public class WatchlistController {
     /***
-    controlller to cretae the watchlist and
-
+     controlller to cretae the watchlist and
      ***/
 
     @Autowired
