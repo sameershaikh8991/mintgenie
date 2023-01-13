@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39965ffb-6c64-495d-ae76-f937ac5d7fee" name="Changes" comment="exceptions">
+      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/UserNotfoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStockToWatchList.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStockToWatchList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/GlobelExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/GlobelExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/NotfoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/NotfoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/Response.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,17 +49,22 @@
     </option>
   </component>
   <component name="ProjectId" id="2K5Ql2OYEoLf91249zRyIFd4uQv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/mint/mintgenie&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "full.screen.before.presentation.mode": "true",
+    "last_opened_file_path": "C:/Users/user/Desktop/mint/mintgenie",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="MintgenieApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mintgenie.MintgenieApplication" />
@@ -100,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673526086763</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="exceptions">
+      <created>1673527559130</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673527559130</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,5 +145,9 @@
     <MESSAGE value="search" />
     <MESSAGE value="exceptions" />
     <option name="LAST_COMMIT_MESSAGE" value="exceptions" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

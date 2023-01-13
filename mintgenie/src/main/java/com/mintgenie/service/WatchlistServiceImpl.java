@@ -46,14 +46,11 @@ public class WatchlistServiceImpl implements WatchlistService {
 
     @Override
     public Watchlist getByWatchlistId(int id) {
-        try{
+
             Watchlist watchlist1 = watchlistRepo.findById(id).orElseThrow( () -> new NotfoundException(id));
             watchlist1.getWatchlistId();
             return watchlist1;
-        }
-        catch (NotfoundException ex){
-            throw  new NotfoundException(id);
-        }
+
 
     }
 

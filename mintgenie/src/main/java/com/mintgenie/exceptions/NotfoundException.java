@@ -11,7 +11,7 @@ public class NotfoundException  extends  RuntimeException{
     }
 
     public NotfoundException(int id) {
-        super(String.format("not found with this id: %s",id));
+        super(String.format("WatchList not found with this id: %s",id));
         this.id=id;
     }
 

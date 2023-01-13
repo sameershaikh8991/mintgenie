@@ -4,10 +4,10 @@ public class Response {
 
 
     String message;
-    boolean status;
+    String status;
 
 
-    public Response(String message, boolean status) {
+    public Response(String message, String status) {
         super();
         this.message = message;
         this.status = status;
@@ -18,11 +18,13 @@ public class Response {
     public void setMessage(String message) {
         this.message = message;
     }
-    public boolean isStatus() {
+    public String isStatus() {
         return status;
     }
-    public void setStatus(boolean status) {
+    public String setStatus(String status) {
         this.status = status;
+        return status;
     }
+
 
 }
