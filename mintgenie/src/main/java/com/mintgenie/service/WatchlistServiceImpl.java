@@ -1,5 +1,6 @@
 package com.mintgenie.service;
 
+import com.mintgenie.exceptions.NotfoundException;
 import com.mintgenie.model.User;
 import com.mintgenie.model.Watchlist;
 import com.mintgenie.repository.AddRepo;
@@ -45,8 +46,12 @@ public class WatchlistServiceImpl implements WatchlistService {
 
     @Override
     public Watchlist getByWatchlistId(int id) {
-        Watchlist watchlist1 = this.watchlistRepo.findById(id).get();
+
+        Watchlist watchlist1 = watchlistRepo.findById(id).orElseThrow(() -> new NotfoundException(id));
+        watchlist1.getWatchlistId();
         return watchlist1;
+
+
     }
 
     public static String generateWatchlistName() {

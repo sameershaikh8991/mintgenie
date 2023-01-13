@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mintgenie.model.Watchlist;
 
 @RestController
-@RequestMapping("/edit")
+@RequestMapping("Watchlist/edit")
 public class EditController {
     /**
      * controller to edit the watchlist
@@ -33,7 +33,6 @@ public class EditController {
     @DeleteMapping("/deleteWatchlist")
     public void deleteWatchList(@RequestParam int id) {
         Watchlist watchlistOG = watchlistService.getByWatchlistId(id);
-
         watchlistService.deleteById(id);
         System.out.println("Deleted successfully");
     }
