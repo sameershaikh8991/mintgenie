@@ -24,8 +24,8 @@ public class SearchController {
 
      */
     @GetMapping("/search")
-    public List<Stock> SearchByName(@RequestParam String stockname){
-        System.out.println(" in search controller "+stockname);
+    public List<Stock> SearchByName(@RequestParam String stockname) {
+        System.out.println(" in search controller " + stockname);
 
         return searchService.getByname(stockname);
     }

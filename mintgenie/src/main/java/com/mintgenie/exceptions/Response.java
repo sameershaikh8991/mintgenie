@@ -12,15 +12,19 @@ public class Response {
         this.message = message;
         this.status = status;
     }
+
     public String getMessage() {
         return message;
     }
+
     public void setMessage(String message) {
         this.message = message;
     }
+
     public String isStatus() {
         return status;
     }
+
     public String setStatus(String status) {
         this.status = status;
         return status;

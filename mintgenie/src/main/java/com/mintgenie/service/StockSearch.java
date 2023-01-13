@@ -14,7 +14,7 @@ public class StockSearch {
     private StockRepo stockRepo;
 
 
-    public List<Stock> getByname(String stockname){
+    public List<Stock> getByname(String stockname) {
         return stockRepo.findByStockNameContaining(stockname);
     }
 }

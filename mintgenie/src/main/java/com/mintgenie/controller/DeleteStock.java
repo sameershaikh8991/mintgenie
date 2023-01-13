@@ -18,19 +18,17 @@ public class DeleteStock {
     @Autowired
     private DeleteStockService delete1;
 
-/*
+    /*
 
-  Delete stock controller
+      Delete stock controller
 
- */
+     */
     @DeleteMapping("/deletestock")
-    public void deletedata(@RequestParam  int sid,@RequestParam int wid,@RequestParam int uid){
+    public void deletedata(@RequestParam int sid, @RequestParam int wid, @RequestParam int uid) {
         System.out.println(" in delete stock controller");
-        delete1.deletestockserv(sid,wid,uid);
+        delete1.deletestockserv(sid, wid, uid);
         delete1.W1(wid);
     }
-
-
 
 
 }

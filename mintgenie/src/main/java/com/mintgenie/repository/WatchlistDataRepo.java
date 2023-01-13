@@ -10,10 +10,12 @@ import org.springframework.stereotype.Repository;
 import javax.transaction.Transactional;
 
 @Repository
-public interface WatchlistDataRepo  extends JpaRepository<WatchlistData,Integer> {
+public interface WatchlistDataRepo extends JpaRepository<WatchlistData, Integer> {
     //stockid, watchlistid, type, user_id
     @Transactional
     @Modifying
-    @Query(value = "delete from watchlist_data where stockid =:sid and watchlistid =:wid and user_id= :uid"   ,nativeQuery = true)
-       void  deleteStock(@Param("sid") int sid, @Param("wid") int wid, @Param("uid") int uid);
+    @Query(value = "delete from watchlist_data where stockid =:sid and watchlistid =:wid and user_id= :uid", nativeQuery = true)
+    void deleteStock(@Param("sid") int sid, @Param("wid") int wid, @Param("uid") int uid);
+
+
 }

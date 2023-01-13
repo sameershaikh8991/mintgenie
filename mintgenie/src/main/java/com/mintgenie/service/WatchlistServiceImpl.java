@@ -47,9 +47,9 @@ public class WatchlistServiceImpl implements WatchlistService {
     @Override
     public Watchlist getByWatchlistId(int id) {
 
-            Watchlist watchlist1 = watchlistRepo.findById(id).orElseThrow( () -> new NotfoundException(id));
-            watchlist1.getWatchlistId();
-            return watchlist1;
+        Watchlist watchlist1 = watchlistRepo.findById(id).orElseThrow(() -> new NotfoundException(id));
+        watchlist1.getWatchlistId();
+        return watchlist1;
 
 
     }

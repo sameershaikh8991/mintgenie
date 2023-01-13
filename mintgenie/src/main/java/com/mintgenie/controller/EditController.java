@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mintgenie.model.Watchlist;
 
 @RestController
-@RequestMapping("/edit")
+@RequestMapping("Watchlist/edit")
 public class EditController {
     /**
      * controller to edit the watchlist

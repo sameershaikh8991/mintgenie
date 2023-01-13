@@ -11,8 +11,8 @@ import javax.persistence.Table;
 
 @Entity
 public class Stock {
-	@Id
-	private int stock_id;
+    @Id
+    private int stock_id;
     private String stockName;
     private int stock_price;
     private String listedOn;

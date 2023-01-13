@@ -4,14 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39965ffb-6c64-495d-ae76-f937ac5d7fee" name="Changes" comment="exceptions">
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/UserNotfoundException.java" afterDir="false" />
+    <list default="true" id="39965ffb-6c64-495d-ae76-f937ac5d7fee" name="Changes" comment="exceptions 1">
+      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/CommonException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/MintgenieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/MintgenieApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStockToWatchList.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStockToWatchList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/DeleteStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/DeleteStock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/EditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/EditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/WatchlistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/WatchlistController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/GlobelExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/GlobelExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/NotfoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/NotfoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/UserNotfoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/exceptions/UserNotfoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/AddRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/AddRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/StockRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/StockRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/WatchlistDataRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/WatchlistDataRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/DeleteStockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/DeleteStockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/StockSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/StockSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,15 +71,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "full.screen.before.presentation.mode": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/mint/mintgenie",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/mint/mintgenie&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="MintgenieApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mintgenie.MintgenieApplication" />
@@ -115,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673527559130</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="exceptions 1">
+      <created>1673588744605</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673588744605</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,7 +166,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="search" />
     <MESSAGE value="exceptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="exceptions" />
+    <MESSAGE value="exceptions 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="exceptions 1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

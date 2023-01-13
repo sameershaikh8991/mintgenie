@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/addStocktoWatchList")
+@RequestMapping("/Watchlist")
 public class AddStockToWatchList {
     /**
      * controller to add the stock to the watchList
@@ -24,8 +24,7 @@ public class AddStockToWatchList {
     WatchlistService watchlistService;
 
 
-
-    @PostMapping("/addingStock")
+    @PostMapping("/addStock")
     public WatchlistData addStock(@RequestBody WatchlistData watchlistData) {
         return addStockService.addStocks(watchlistData);
 
