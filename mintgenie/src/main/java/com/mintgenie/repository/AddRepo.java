@@ -17,6 +17,7 @@ public interface AddRepo extends JpaRepository<WatchlistData, ListId> {
 //    Optional<WatchlistData> find(@Param("start_date") int watchlistid, );
 
     Optional<WatchlistData> findByIdWatchlistid(int id);
+    Optional<WatchlistData> findByIdWatchlistidAndIdStockid(int watchlistid,int stockid);
 
     void deleteByIdWatchlistid(int id);
 

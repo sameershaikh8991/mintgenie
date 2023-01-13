@@ -3,7 +3,7 @@ package com.mintgenie.controller;
 import com.mintgenie.model.Watchlist;
 import com.mintgenie.model.WatchlistData;
 import com.mintgenie.service.AddStockService;
-import com.mintgenie.service.EditService;
+
 import com.mintgenie.service.WatchlistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

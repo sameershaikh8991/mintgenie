@@ -27,19 +27,27 @@ public class AddStockService {
 
     public WatchlistData addStocks(WatchlistData watchlistData) {
         int watchListId = watchlistData.getId().getWatchlistid();
+        int stockid=watchlistData.getId().getStockid();
         Watchlist watchlist = watchlistService.getByWatchlistId(watchListId);
-        int stocknumber = watchlist.getNumberOfStocks();
-        System.out.println(stocknumber);
-        if (stocknumber < 10) {
-            addRepo.save(watchlistData);
-            stocknumber = stocknumber + 1;
-            watchlist.setNumberOfStocks(stocknumber);
-            watchlistService.updateWatchlist(watchlist);
-            return watchlistData;
+        Optional<WatchlistData> data = addRepo.findByIdWatchlistidAndIdStockid(watchListId,stockid);
+        System.out.println(data);
+        if (!data.isPresent()){
+            int stocknumber = watchlist.getNumberOfStocks();
+            System.out.println(stocknumber);
+            if (stocknumber < 10) {
+                addRepo.save(watchlistData);
+                stocknumber = stocknumber + 1;
+                watchlist.setNumberOfStocks(stocknumber);
+                watchlistService.updateWatchlist(watchlist);
+                return watchlistData;
 
-        } else {
-            System.err.println("Limit has been reached Please create new watchlist");
+            } else {
+                System.err.println("Limit has been reached Please create new watchlist");
+            }
+        }else {
+            System.err.println("Stock already present in the watchlist");
         }
+
         return watchlistData;
 
     }
