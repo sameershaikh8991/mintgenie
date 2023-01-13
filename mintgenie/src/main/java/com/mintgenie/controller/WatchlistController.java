@@ -28,7 +28,8 @@ public class WatchlistController {
     }
 
     @GetMapping("/getByWatchlistId")
-    public List<StockDTO> getByWatchlistId(@RequestParam int id) {
+    public WatchlistDTO getByWatchlistId(@RequestParam int id){
+//        return this.watchlistService.getByWatchlistId(id);
         return this.watchlistService.getByWatchlistId(id);
     }
 

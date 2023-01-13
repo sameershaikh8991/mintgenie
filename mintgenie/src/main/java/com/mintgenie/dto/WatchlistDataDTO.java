@@ -1,20 +1,24 @@
 package com.mintgenie.dto;
 
-import com.mintgenie.model.Stock;
+import com.mintgenie.model.ListId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import javax.persistence.EmbeddedId;
 
+@NoArgsConstructor
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
-
 public class WatchlistDataDTO {
-    private int watchlistId;
+
+//	@EmbeddedId
+//	private ListId id;
+
+    @EmbeddedId
+    private ListId id;
     private int userId;
-    private List<Stock> stockList;
     private String type;
+
 
 }

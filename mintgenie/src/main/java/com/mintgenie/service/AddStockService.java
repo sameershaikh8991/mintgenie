@@ -1,79 +1,10 @@
 package com.mintgenie.service;
 
-import com.mintgenie.model.Stock;
-import com.mintgenie.model.Watchlist;
+import com.mintgenie.dto.WatchlistDataDTO;
 import com.mintgenie.model.WatchlistData;
-import com.mintgenie.payload.ModelMapperPayload;
-import com.mintgenie.repository.AddRepo;
-import com.mintgenie.repository.WatchlistRepo;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.NoSuchElementException;
+public interface AddStockService {
+//    WatchlistData addStocks(WatchlistData watchlistData);
 
-@Service
-public class AddStockService {
-
-    @Autowired
-    AddRepo addRepo;
-    @Autowired
-    private WatchlistRepo watchlistRepo;
-    @Autowired
-    private ModelMapperPayload modelMapperPayload;
-
-
-    public WatchlistData addStocks(WatchlistData data) {
-        //List<Stock> stocklist = data.getStockList();
-
-        addRepo.save(data);
-        return data;
-
-    }
-
-    public WatchlistData getByWatchListId(int id) {
-
-        String type = "stock";
-        try {
-            return addRepo.findByIdWatchlistid(id).get();
-        } catch (NoSuchElementException noSuchElementException) {
-            System.out.println(noSuchElementException);
-        }
-
-        //return addRepo.findByIdWatchlistid(id).get();
-        return null;
-    }
-
-    public List<Stock> updateStockList(WatchlistData watchlistData) {
-
-        int watchListId = watchlistData.getId().getWatchlistid();
-        Watchlist watchlist = watchlistRepo.findById(watchListId).get();
-        WatchlistData oldWatchList = addRepo.findByIdWatchlistid(watchListId).get();
-        List<Stock> oldStockList = oldWatchList.getStockList();
-
-
-        List<Stock> newStockList = watchlistData.getStockList();
-        List<Stock> MergedList = new ArrayList<>();
-        MergedList.addAll(oldStockList);
-        MergedList.addAll(newStockList);
-        int oldcount = watchlist.getNumberOfStocks();
-        watchlist.setNumberOfStocks(MergedList.size());
-        watchlistRepo.save(watchlist);
-
-        return MergedList;
-
-
-    }
-
-    public void newlyAdded(WatchlistData watchlistData) {
-        int currentsize = watchlistData.getStockList().size();
-        int watchlistId = watchlistData.getId().getWatchlistid();
-        Watchlist watchlist = watchlistRepo.findById(watchlistId).get();
-        watchlist.setNumberOfStocks(currentsize);
-        watchlistRepo.save(watchlist);
-
-    }
-
-
+    WatchlistDataDTO addStocks(WatchlistDataDTO watchlistDataDTO);
 }
