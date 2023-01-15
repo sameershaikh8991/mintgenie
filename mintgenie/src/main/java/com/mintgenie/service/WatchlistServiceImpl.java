@@ -1,14 +1,19 @@
 package com.mintgenie.service;
 
 import com.mintgenie.exceptions.NotfoundException;
+import com.mintgenie.model.Stock;
 import com.mintgenie.model.User;
 import com.mintgenie.model.Watchlist;
 import com.mintgenie.repository.AddRepo;
-import com.mintgenie.repository.EditRepo;
+
+import com.mintgenie.repository.StockRepo;
 import com.mintgenie.repository.UserRepo;
 import com.mintgenie.repository.WatchlistRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class WatchlistServiceImpl implements WatchlistService {
@@ -20,6 +25,8 @@ public class WatchlistServiceImpl implements WatchlistService {
     UserRepo userRepo;
     @Autowired
     private AddRepo addRepo;
+    @Autowired
+    StockRepo stockRepo;
 
 
     @Override
@@ -77,6 +84,7 @@ public class WatchlistServiceImpl implements WatchlistService {
 
     }
 
+
     @Override
     public void deleteById(int id) {
         // TODO Auto-generated method stub
@@ -88,7 +96,22 @@ public class WatchlistServiceImpl implements WatchlistService {
         oldCount = oldCount - 1;
         user.setWatchlistCount(oldCount);
         userRepo.save(user);
+        addRepo.deleteByIdWatchlistid(id);
         //  addRepo.deleteByIdWatchlistid(id);
 
+    }
+
+    @Override
+    public List<Stock> stockList(int id) {
+        System.out.println(id);
+        List<Integer> stockIdList=   watchlistRepo.findAllStocksFromWatchlist(id);
+        System.out.println(stockIdList);
+        List<Stock> stocks = new ArrayList<>();
+//        stocks.addAll(stockIdList);
+        for (int i = 0; i < stockIdList.size(); i++) {
+            Stock stock = stockRepo.findById(stockIdList.get(i)).get();
+            stocks.add(stock);
+        }
+        return  stocks;
     }
 }

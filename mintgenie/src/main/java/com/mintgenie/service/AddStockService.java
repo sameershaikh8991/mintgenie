@@ -3,6 +3,7 @@ package com.mintgenie.service;
 import com.mintgenie.exceptions.CommonException;
 import com.mintgenie.model.Stock;
 import com.mintgenie.model.Watchlist;
+import com.mintgenie.repository.StockRepo;
 import com.mintgenie.repository.UserRepo;
 import com.mintgenie.repository.WatchlistRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,8 @@ public class AddStockService {
 
     @Autowired
     private UserServiceImpl userService;
+//    @Autowired
+//    StockRepo stockRepo;
 
     public WatchlistData addStocks(WatchlistData watchlistData) {
         int watchListId = watchlistData.getId().getWatchlistid();
@@ -62,32 +65,21 @@ public class AddStockService {
         return watchlistData;
 
     }
+
+
+//    public List<Stock> stockList(int id) {
+//        List<Integer> stockIdList=   watchlistRepo.findAllStocksFromWatchlist(id);
+//        System.out.println(stockIdList);
+//        List<Stock> stocks = new ArrayList<>();
+////        stocks.addAll(stockIdList);
+//        for (int i = 0; i < stockIdList.size(); i++) {
+//            Stock stock = stockRepo.findById(stockIdList.get(i)).get();
+//            stocks.add(stock);
+//        }
+//        return  stocks;
+//    }
+
 }
 
-//    public WatchlistData addStocks(WatchlistData watchlistData) {
-//        int watchListId = watchlistData.getId().getWatchlistid();
-//        int stockid = watchlistData.getId().getStockid();
-//        Watchlist watchlist = watchlistService.getByWatchlistId(watchListId);
-//        Optional<WatchlistData> data = addRepo.findByIdWatchlistidAndIdStockid(watchListId, stockid);
-//        System.out.println(data);
-//        if (!data.isPresent()) {
-//            int stocknumber = watchlist.getNumberOfStocks();
-//            System.out.println(stocknumber);
-//            if (stocknumber < 10) {
-//                addRepo.save(watchlistData);
-//                stocknumber = stocknumber + 1;
-//                watchlist.setNumberOfStocks(stocknumber);
-//                watchlistService.updateWatchlist(watchlist);
-//                return watchlistData;
-//
-//            } else {
-//                System.err.println("Limit has been reached Please create new watchlist");
-//            }
-//        } else {
-//            System.err.println("Stock already present in the watchlist");
-//        }
-//
-//        return watchlistData;
-//
-//    }
+
 
