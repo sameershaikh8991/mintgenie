@@ -10,6 +10,7 @@ import com.mintgenie.payload.ModelMapperPayload;
 import com.mintgenie.repository.StockRepo;
 import com.mintgenie.repository.UserRepo;
 import com.mintgenie.repository.WatchlistRepo;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +25,8 @@ public class WatchlistServiceImpl implements WatchlistService {
     UserRepo userRepo;
     @Autowired
     private WatchlistRepo watchlistRepo;
-
+    @Autowired
+    private ModelMapper modelMapper;
     @Autowired
     private StockRepo stockRepo;
 
@@ -82,7 +84,19 @@ public class WatchlistServiceImpl implements WatchlistService {
                 Stock stock = stockRepo.findById(stockIdList.get(i)).get();
                 stocks.add(stock);
             }
-        List<StockDTO> stockDTOS = stocks.stream().map(stock -> this.modelMapperPayload.stockToDto(stock)).collect(Collectors.toList());
+        System.out.println(stocks);
+
+/*        List<StockDTO> stockDTOS = stocks
+                .stream()
+                .map(stock -> this.modelMapperPayload.stockToDto(stock))
+                .collect(Collectors.toList());*/
+        List<StockDTO> stockDTOS  = stocks.stream().map(stock -> this.modelMapper.map(stock, StockDTO.class)).collect(Collectors.toList());
+//        List<StockDTO> stockDTOS = Arrays.asList(modelMapper.map(stocks, StockDTO[].class));
+        /*List<StockDTO> stockDTOS = stocks
+                .stream()
+                        .map(modelMapperPayload::entityToDTO)
+                                .collect(Collectors.toList());*/
+        System.out.println(stockDTOS);
         return stockDTOS;
     }
 

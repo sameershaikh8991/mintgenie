@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39965ffb-6c64-495d-ae76-f937ac5d7fee" name="Changes" comment="exceptions">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_modelmapper_modelmapper_2_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/StockRepo.java" afterDir="false" />
+    <list default="true" id="069a6f7c-1005-4e8b-9dba-cdb3beed2a05" name="Changes" comment="12/1&#10;11:25">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStockToWatchList.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStockToWatchList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/WatchlistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/WatchlistController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/dto/StockDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/dto/StockDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/EditRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/WatchlistRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/repository/WatchlistRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/payload/ModelMapperPayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/payload/ModelMapperPayload.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,17 +32,18 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="siddhesh" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/MintgenieApplication.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/controller/AddStockToWatchList.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/ListId.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/Watchlist.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/model/WatchlistData.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/AddStockService.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistService.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/mintgenie/src/main/java/com/mintgenie/service/WatchlistServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -103,13 +97,14 @@
         <item itemvalue="Application.MintgenieApplication" />
         <item itemvalue="Application.MintgenieApplication" />
         <item itemvalue="Application.MintgenieApplication" />
+        <item itemvalue="Application.MintgenieApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="39965ffb-6c64-495d-ae76-f937ac5d7fee" name="Changes" comment="exceptions" />
+      <changelist id="069a6f7c-1005-4e8b-9dba-cdb3beed2a05" name="Changes" comment="12/1&#10;11:25" />
       <created>1673262114040</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

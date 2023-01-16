@@ -18,6 +18,26 @@ public class StockDTO {
         this.status = status;
     }
 
+    public void setStock_id(int stock_id) {
+        this.stock_id = stock_id;
+    }
+
+    public void setStockName(String stockName) {
+        this.stockName = stockName;
+    }
+
+    public void setStock_price(int stock_price) {
+        this.stock_price = stock_price;
+    }
+
+    public void setListedOn(String listedOn) {
+        this.listedOn = listedOn;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
     public int getStock_id() {
         return stock_id;
     }
@@ -36,5 +56,16 @@ public class StockDTO {
 
     public boolean isStatus() {
         return status;
+    }
+
+    @Override
+    public String toString() {
+        return "StockDTO{" +
+                "stock_id=" + stock_id +
+                ", stockName='" + stockName + '\'' +
+                ", stock_price=" + stock_price +
+                ", listedOn='" + listedOn + '\'' +
+                ", status=" + status +
+                '}';
     }
 }

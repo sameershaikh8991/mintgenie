@@ -9,6 +9,7 @@ import com.mintgenie.model.User;
 import com.mintgenie.model.Watchlist;
 import com.mintgenie.model.WatchlistData;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
@@ -55,6 +56,12 @@ public class ModelMapperPayload {
 
     public StockDTO stockToDto(Stock stock) {
         StockDTO stockDTO = this.modelMapper.map(stock, StockDTO.class);
+        return stockDTO;
+    }
+
+    public StockDTO entityToDTO(Stock stock){
+        StockDTO stockDTO = new StockDTO();
+        BeanUtils.copyProperties(stock, stockDTO);
         return stockDTO;
     }
 }

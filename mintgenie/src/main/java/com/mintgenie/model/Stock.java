@@ -48,4 +48,15 @@ public class Stock {
     public boolean isStatus() {
         return status;
     }
+
+    @Override
+    public String toString() {
+        return "Stock{" +
+                "stock_id=" + stock_id +
+                ", stockName='" + stockName + '\'' +
+                ", stock_price=" + stock_price +
+                ", listedOn='" + listedOn + '\'' +
+                ", status=" + status +
+                '}';
+    }
 }
