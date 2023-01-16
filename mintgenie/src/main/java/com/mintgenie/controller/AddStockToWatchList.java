@@ -1,7 +1,6 @@
 package com.mintgenie.controller;
 
 import com.mintgenie.dto.WatchlistDataDTO;
-import com.mintgenie.model.WatchlistData;
 import com.mintgenie.service.AddStockServiceImpl;
 import com.mintgenie.service.WatchlistService;
 import org.springframework.beans.factory.annotation.Autowired;

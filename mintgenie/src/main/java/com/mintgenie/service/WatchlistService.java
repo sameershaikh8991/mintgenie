@@ -2,6 +2,7 @@ package com.mintgenie.service;
 
 import com.mintgenie.dto.StockDTO;
 import com.mintgenie.dto.WatchlistDTO;
+import com.mintgenie.model.Stock;
 import com.mintgenie.model.Watchlist;
 
 import java.util.List;
@@ -12,7 +13,9 @@ public interface WatchlistService {
 
     public WatchlistDTO getByWatchlistId(int id);
 
-    List<StockDTO> getAllStocksByWatchlistId(int id);
+//    List<Integer> getAllStocksByWatchlistId(int id);
+
+    List<StockDTO> stockList(int id);
 
     WatchlistDTO updateWatchlist(WatchlistDTO watchlistDTO);
 

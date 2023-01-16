@@ -37,6 +37,7 @@ public class AddStockServiceImpl {
         System.out.println(stocknumber);
         if (stocknumber < 10) {
             WatchlistData watchlistData1 = this.modelMapperPayload.dtoToWatchlistData(watchlistDataDTO);
+            this.addRepo.save(watchlistData1);
             stocknumber = stocknumber + 1;
             watchlistDTO.setNumberOfStocks(stocknumber);
             watchlistService.updateWatchlist(watchlistDTO);

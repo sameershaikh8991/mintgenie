@@ -3,19 +3,17 @@ package com.mintgenie.service;
 import com.mintgenie.dto.StockDTO;
 import com.mintgenie.dto.UserDTO;
 import com.mintgenie.dto.WatchlistDTO;
-import com.mintgenie.dto.WatchlistDataDTO;
 import com.mintgenie.model.Stock;
 import com.mintgenie.model.User;
 import com.mintgenie.model.Watchlist;
-import com.mintgenie.model.WatchlistData;
 import com.mintgenie.payload.ModelMapperPayload;
-import com.mintgenie.repository.AddRepo;
+import com.mintgenie.repository.StockRepo;
 import com.mintgenie.repository.UserRepo;
 import com.mintgenie.repository.WatchlistRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -28,13 +26,12 @@ public class WatchlistServiceImpl implements WatchlistService {
     private WatchlistRepo watchlistRepo;
 
     @Autowired
-    private AddRepo addRepo;
+    private StockRepo stockRepo;
 
     @Autowired
     private UserServiceImpl userService;
 
-    @Autowired
-    private WatchlistService watchlistService;
+
 
     @Autowired
     private ModelMapperPayload modelMapperPayload;
@@ -73,15 +70,20 @@ public class WatchlistServiceImpl implements WatchlistService {
     @Override
     public WatchlistDTO getByWatchlistId(int id) {
         Watchlist watchlist = this.watchlistRepo.findById(id).get();
+
         return this.modelMapperPayload.watchlistToDto(watchlist);
     }
 
     @Override
-    public List<StockDTO> getAllStocksByWatchlistId(int id/*, WatchlistDataDTO watchlistDataDTO*/) {
-//        int watchlistId = watchlistDataDTO.getId().getWatchlistid();
-//        List<WatchlistDataDTO> stocks = watchlistDataDTO.getId().getStockid();
-//        List<StockDTO> stockDTOS = stocks.stream().map(stock -> this.modelMapperPayload.stockToDto(stock)).collect(Collectors.toList());
-        return null;
+    public List<StockDTO> stockList(int id) {
+        List<Integer> stockIdList = this.watchlistRepo.findAllStocksFromWatchlist(id);
+        List<Stock> stocks = new ArrayList<>();
+            for(int i=0;i<stockIdList.size();i++){
+                Stock stock = stockRepo.findById(stockIdList.get(i)).get();
+                stocks.add(stock);
+            }
+        List<StockDTO> stockDTOS = stocks.stream().map(stock -> this.modelMapperPayload.stockToDto(stock)).collect(Collectors.toList());
+        return stockDTOS;
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.mintgenie.controller;
 
 import com.mintgenie.dto.StockDTO;
 import com.mintgenie.dto.WatchlistDTO;
+import com.mintgenie.model.Stock;
 import com.mintgenie.service.UserServiceImpl;
 import com.mintgenie.service.WatchlistService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,11 @@ public class WatchlistController {
     public WatchlistDTO getByWatchlistId(@RequestParam int id){
 //        return this.watchlistService.getByWatchlistId(id);
         return this.watchlistService.getByWatchlistId(id);
+    }
+
+    @GetMapping("/watchlistStocks")
+    public List<StockDTO> getAllStocksByWatchlistId (@RequestParam int id){
+        return this.watchlistService.stockList(id);
     }
 
 }
